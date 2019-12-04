@@ -1,0 +1,166 @@
+For each of these exercises, without using any code, you are expected to identify the following:
+
+What is the input to the program?
+What is the output of the program?
+What is the input to each recursive call?
+What is the output of each recursive call?
+-------------------------------------------------------
+
+1. Counting Sheep
+Input = 3
+
+Output = 
+3: Another sheep jumps over the fence
+2: Another sheep jumps over the fence
+1: Another sheep jumps over the fence
+All sheep jumped over the fence
+
+Input to each recursive call:
+3,2,1,0
+
+Output to each call:
+3: Another sheep jumps over the fence
+2: Another sheep jumps over the fence
+1: Another sheep jumps over the fence
+All sheep jumped over the fence
+
+[ when input === 0, you output 'All sheep']
+
+-----
+
+2. Power Calculator 
+Input:
+base and exponent
+
+Output:
+base^exponent
+
+input case:
+base * base
+
+output:
+total of base * base * base [whatever the exponent value is]
+[until exponent = 1; also need case that exponent >0]
+
+------
+
+3. Reverse String
+
+input: string
+
+output: gnirts
+
+input case:
+the first letter of the string
+
+output:
+the first letter of string to an array [to be recombined into string later]
+[until string.length == 0]
+
+------
+
+4. nth Triangular Number
+
+input: number => 0
+
+output:
+  *
+ * *
+(if input is 3)
+
+input = nth
+
+output = 
+1 star in own row
+2 stars in own row
+3 stars in own row
+until we hit
+nth stars in own row
+
+------
+
+5. String Splitter
+
+Input: 02/20/2020
+Output: ["02", "20", "2020"]
+
+Input case:
+02
+
+output:
+'02' slice until separator found until all separators have been found
+
+-------
+
+6. Fibonacci
+(The Fibonacci sequence is a series of numbers in which each number is the sum of the 2 preceding numbers.)
+
+Input: 7
+Output: 1, 1, 2, 3, 5, 8, 13
+
+input case: if n = 
+
+output case: 
+
+-------
+
+7. Factorial
+For example, the factorial of 5 is 5 * 4 * 3 * 2 * 1 = 120.
+
+input case: n 
+
+output: n * n-1 * n-2 ... (n - y = 1)
+
+---------------
+
+8. Find a way out of the maze
+
+let mySmallMaze = [
+    [' ', ' ', ' '],
+    [' ', '*', ' '],
+    [' ', ' ', 'e']
+];
+
+output(s):
+ddrr
+rrdd
+
+Essentially you are looking for any solutions that bring it to 'e' as the base case
+
+9. Find ALL the ways out of the maze
+See above:
+----------------
+10. Anagrams
+
+Input: string
+
+output: all other strings regardless of validity
+ example given:
+ For example, if the user types "east", 
+ the program should list all 24 permutations, including "eats", "etas", "teas", and non-words like "tsae".
+
+input case: east
+
+output would need to call first letter and place in first position, then add in next letter and so on until length of string == 0.
+then call itself with next letter in first position until each letter has been gone through.
+
+
+------------------------------
+11. Organization Chart
+(see example for output because it requires indentation and specific order)
+
+We would need to know if input is array or object with keys, then we would need to run through those keys in order.
+Each name would need to be in its own row with indentation, so output would need n-row = n number of tabs or spaces
+
+-----------------------------
+12. Binary Representation
+
+Write a recursive function that prints out the binary representation of a given number
+
+input = 3
+output = 11
+
+input case = n / 2, then n / 4, need to use factorial? to call itself until n == 0.
+
+output: either 1 or 0 for each division. 
+
